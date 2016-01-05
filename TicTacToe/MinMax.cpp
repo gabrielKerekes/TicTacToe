@@ -94,7 +94,7 @@ bool MinMax::handleFirstTwoMoves(const GameField &gameField, const Player &oppon
 	//if it is the first move play center		
 	if (gameField.getNumOfFilled() == 0)
 	{
-		mBestMove = Point(ceil(gameField.getSize() / 2), ceil(gameField.getSize() / 2));
+		mBestMove = Point((int) ceil(gameField.getSize() / 2), (int) ceil(gameField.getSize() / 2));
 		return true;
 	}
 	//if it is the second move play diagonally to the opponent
