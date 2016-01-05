@@ -29,7 +29,7 @@ int safeIntCin(int from, int to)
 	while (!(cin >> number) || number < from || number > to) {
 		cin.clear();
 		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		cout << endl << "Invalid input. Please type a number between " << from << " and " << to << "; ";
+		cout << endl << "Invalid input. Please type a number between " << from << " and " << to << ": ";
 	}
 
 	return number;
@@ -62,7 +62,7 @@ int menu(Settings* settings)
 		cout << "0. Quit" << endl;
 		printSeparator();
 		cout << "Your choice: ";
-		cin >> choice;
+		choice = safeIntCin(0, 4);
 
 		switch (choice)
 		{
